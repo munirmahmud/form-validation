@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputField = (props) => {
-  const { type, name, label, placeholder } = props;
+  const { type, name, label, placeholder, error } = props;
 
   const fieldType = type ? type : "text";
 
@@ -18,6 +18,8 @@ const InputField = (props) => {
         id={name}
         placeholder={placeholder}
       />
+
+      {/* {error && <div className="invalid-feedback">{error}</div>} */}
     </div>
   );
 };
